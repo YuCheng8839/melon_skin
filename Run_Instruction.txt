@@ -1,0 +1,18 @@
+1. ############################Activate your conda enviroment (If you're using the conda) ############################
++ example: conda activate MelonSkinClassification 
+(MelonSkinClassification: name of your enviroment which you want to call it)
+
+2. ############################Train model##########################
++ python MelonSkinclassification_spp.py -type train 
+3. ############################evaluate model##########################
++ python python MelonSkinclassification_spp.py 
+or: 
++ python python MelonSkinclassification_spp.py -type test
+
+4. ############################If you would to generate new dataset from begining############################
+4.1. ###### Enter the Dataprocessing folder from current folder######
+cd ExtractMelonObjectData
+4.2. ###### Obtain tomato vertical object using mask rcnn (we need to install Mask_RCNN-TF2)######
++ python maskrcnn_predict_melon_wholeData.py --input_folder input --output_folder output
+(input folder contains RawData, output folder contains melon object)
+
